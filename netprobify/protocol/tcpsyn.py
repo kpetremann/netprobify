@@ -281,7 +281,7 @@ class TCPsyn(Target):
 
         # send reset packets
         log_tcpsyn.debug("%s: sending %i TCP RST packets", self.name, len(self.packets_rst))
-        send(self.packets_rst, iface=if_egress, inter=self.interval, verbose=0)
+        send(self.packets_rst, iface=if_egress, inter=0, verbose=0)
 
         log_tcpsyn.debug("%s: packets sent", self.name)
 
