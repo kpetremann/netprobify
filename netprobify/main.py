@@ -909,6 +909,7 @@ class NetProbify:
                     for i in reversed(range(len(jobs))):
                         if not jobs[i].is_alive():
                             jobs.pop(i)
+                    time.sleep(0.01)
 
         log.debug("No targets in the queue anymore")
         # wait for all process to finish
