@@ -120,8 +120,6 @@ class UDPunreachable(Target):
         # generate payload at the good size
         udp_payload = Raw(RandString(size=self.proto_payload_size))
 
-        ip_kwargs = {}
-
         # get an IP object and a source address depending on the desired address-family
         af_ip_object = af_to_ip_protocol(self.address_family)
 
